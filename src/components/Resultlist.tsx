@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 interface Product {
@@ -159,7 +160,7 @@ const ResultList = () => {
                   <div className="overlay" id="product-overlay">
                     <div className="product-link">
                       <div className="product-details">
-                        <a href={`/products/${product.id}`}>See Details</a>
+                        <Link to={`/products/${product.id}`}>See Details</Link>
                       </div>
                       <div className="product-buttons">
                         <a href="#"><img src="../src/assets/share-icon.png" alt="Share Button" /></a> 
