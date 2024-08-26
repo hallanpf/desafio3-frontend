@@ -138,6 +138,7 @@ const Product = () => {
         name: product.name,
         price: selectedVariant.price, 
         quantity: quantity,
+        image: product.productImages[0].url,
       };
       console.log('Adding item to cart:', item);
       dispatch(addItemToCart(item));

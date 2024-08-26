@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/store';
-import { removeItemFromCart, clearCart } from '../features/cartSlice';
+import { removeItemFromCart } from '../features/cartSlice';
 import { useNavigate } from 'react-router-dom';
 
 interface CartSidebarProps {
@@ -18,9 +18,9 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
     dispatch(removeItemFromCart(id));
   };
 
-  const handleClearCart = () => {
-    dispatch(clearCart());
-  };
+  // const handleClearCart = () => {
+  //   dispatch(clearCart());
+  // };
 
   const handleGoToCart = () => {
     onClose();
@@ -31,6 +31,11 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
     onClose();
     navigate('/products'); 
   };
+
+  const handleGoToCheckout = () => {
+    onClose();
+    navigate('/checkout');
+  }
 
   if (!isOpen) return null;
 
@@ -48,6 +53,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
             {items.map(item => (
               <li key={item.id}>
                 <p>{item.name}</p>
+                <p><img src={item.image} alt={item.name} /></p>
                 <p>Quantity: {item.quantity}</p>
                 <p>Price: ${(item.price * item.quantity).toFixed(2)}</p>
                 <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
@@ -57,10 +63,11 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
           <div>
             <p>Total Quantity: {totalQuantity}</p>
             <p>Total Price: ${totalPrice.toFixed(2)}</p>
-            <div className='buttons'>
-              <button onClick={handleClearCart}>Clear Cart</button>
+            <div className='cart-sidebar-buttons'>
+              {/* <button onClick={handleClearCart}>Clear Cart</button> */}
               <button onClick={handleGoToCart}>Cart</button>
-              <button onClick={handleContinueShopping}>Continue Shopping</button>
+              <button onClick={handleGoToCheckout}>Checkout</button>
+            <button onClick={handleContinueShopping}>Continue Shopping</button>
             </div>
           </div>
         </div>
