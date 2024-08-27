@@ -7,6 +7,17 @@ const Checkout = () => {
   const totalPrice = useSelector((state: RootState) => state.cart.totalPrice);
 
   return (
+    <>
+    <section className="image-content-section">
+        <div className="image">
+          <img src="../src/assets/Rectangle_1.png" alt="" />
+          <div className="shop-navigation">
+            <h3>Checkout</h3>
+            <p><span>Home {'>'} </span> Checkout</p>
+          </div>
+        </div>
+      </section>
+      
     <div className='checkout-content'>
       <div className='left'>
         <h1>Billing details</h1>
@@ -98,6 +109,7 @@ const Checkout = () => {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

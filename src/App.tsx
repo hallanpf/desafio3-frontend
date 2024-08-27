@@ -2,11 +2,15 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Resultlist from './components/Resultlist';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import Signin from './components/Signin';
+import Signup from './components/Signup'
 import Product from './components/Product';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import CartSidebar from './components/CartSidebar';
 import { useState } from 'react';
+import ProtectedRoute from './components/ProtectedRoute';
+
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -38,51 +42,22 @@ function App() {
         <div className="right">
           <nav>
             <ul>
-              <li><Link to="#"><img src="../src/assets/mdi_account-alert-outline.png" alt="User Account"/></Link></li>
+              <li><Link to="/signin"><img src="../src/assets/mdi_account-alert-outline.png" alt="User Account"/></Link></li>
               <li><button onClick={handleCartOpen}><img src="../src/assets/ant-design_shopping-cart-outlined.png" alt="Shopping Cart" /></button></li>
               <CartSidebar isOpen={isCartOpen} onClose={handleCartClose} />
             </ul>
           </nav>
         </div>
       </header>
-      
-      <section className="image-content-section">
-        <div className="image">
-          <img src="../src/assets/Rectangle_1.png" alt="" />
-          <div className="shop-navigation">
-            <h3>Shop</h3>
-            <p><span>Home</span> Shop</p>
-          </div>
-        </div>
-      </section>
-      
-      <section className="filter-content-section">
-        <div className="left">
-          <div className="filter-bar">
-            <button id="filter-button" className="filter-icon">
-              <img src="../src/assets/system-uicons_filtering.png" alt="Filter Button" />
-            </button>
-            <div className="filter-menu">
-              <button>Default</button>
-              <button>A-Z</button>
-              <button>Z-A</button>
-              <button>Higher to Lower</button>
-              <button>Lower to Higher</button>
-            </div>
-          </div>
-          <div className="results-info">1 de 32 de 62 produtos</div>
-        </div>
-        <div className="right">
-          <p>Show <input id="items-per-page-input" type="number" placeholder="8" /></p>
-        </div>    
-      </section>
-      
+
       <main>
         <Routes>
           <Route path="/products" element={<Resultlist />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={<ProtectedRoute element={<Checkout />} />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
         <ToastContainer position='top-center' autoClose={2000}/>
       </main>

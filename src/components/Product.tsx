@@ -152,6 +152,25 @@ const Product = () => {
 
   return (
     <>
+{/*     
+    <section className="image-content-section">
+        <div className="image">
+          <img src="../src/assets/Rectangle_1.png" alt="" />
+          <div className="shop-navigation">
+            <h3>Shop</h3>
+            <p><span>Home</span> Shop</p>
+          </div>
+        </div>
+      </section>
+       */}
+      <section className="filter-content-section">
+        <div className="left">
+          <p>Home {'>'} Shop {'>'} | {product.name}</p>
+        </div>
+        <div className="right">
+        </div>    
+      </section>
+      
       <div className='main-product'>
         <div className="product-details">
           <div className="product-images">

@@ -31,6 +31,19 @@ const Cart = () => {
   };
 
   return (
+    <>
+    
+    <section className="image-content-section">
+        <div className="image">
+          <img src="../src/assets/Rectangle_1.png" alt="" />
+          <div className="shop-navigation">
+            <h3>Cart</h3>
+            <p><span>Home {'>'} </span> Cart</p>
+          </div>
+        </div>
+      </section>
+      
+      
     <div className="cart-content">
       {items.length === 0 ? (
         <p>Your cart is empty.</p>
@@ -79,6 +92,7 @@ const Cart = () => {
         
       )}
     </div>
+  </>
   );
 };
 

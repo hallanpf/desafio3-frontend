@@ -138,6 +138,38 @@ const ResultList = () => {
 
   return (
     <>
+    
+    <section className="image-content-section">
+        <div className="image">
+          <img src="../src/assets/Rectangle_1.png" alt="" />
+          <div className="shop-navigation">
+            <h3>Shop</h3>
+            <p><span>Home {'>'} </span> Shop</p>
+          </div>
+        </div>
+      </section>
+      
+      <section className="filter-content-section">
+        <div className="left">
+          <div className="filter-bar">
+            <button id="filter-button" className="filter-icon">
+              <img src="../src/assets/system-uicons_filtering.png" alt="Filter Button" />
+            </button>
+            <div className="filter-menu">
+              <button>Default</button>
+              <button>A-Z</button>
+              <button>Z-A</button>
+              <button>Higher to Lower</button>
+              <button>Lower to Higher</button>
+            </div>
+          </div>
+          <div className="results-info">Showing 1 - 8 of 20 results</div>
+        </div>
+        <div className="right">
+          <p>Show <input id="items-per-page-input" type="number" placeholder="8" /></p>
+        </div>    
+      </section>
+      
       {error ? (
         <p>Error loading products. Please try again later.</p>
       ) : products.length > 0 ? (
