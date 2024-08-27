@@ -24,11 +24,15 @@ const Checkout = () => {
             <input type='text' id='company-name' name='company-name' />
           </div>
           <div>
+            <label htmlFor='postcode-zip'>ZIP code</label>
+            <input type='text' id='postcode-zip' name='postcode-zip' required />
+          </div>
+          <div>
             <label htmlFor='country-region'>Country / Region</label>
             <input type='text' id='country-region' name='country-region' required />
           </div>
           <div>
-            <label htmlFor='street-address'>Street address</label>
+            <label htmlFor='street-address'>Street Address</label>
             <input type='text' id='street-address' name='street-address' required />
           </div>
           <div>
@@ -40,12 +44,8 @@ const Checkout = () => {
             <input type='text' id='province' name='province' required />
           </div>
           <div>
-            <label htmlFor='postcode-zip'>Postcode / ZIP</label>
-            <input type='text' id='postcode-zip' name='postcode-zip' required />
-          </div>
-          <div>
-            <label htmlFor='phone'>Phone</label>
-            <input type='tel' id='phone' name='phone' required />
+            <label htmlFor='add-on-address'>Add-on address</label>
+            <input type='text' id='add-on-address' name='add-on-address' required />
           </div>
           <div>
             <label htmlFor='email'>Email address</label>
