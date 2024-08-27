@@ -87,7 +87,7 @@ header {
   right: 0;
   top: 0;
   width: 300px;
-  height: 100%;
+  height: 50%;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -102,6 +102,25 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.cart-sidebar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.sidebar-content-middle {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-sidebar-content button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .cart-sidebar-header button {
@@ -125,7 +144,7 @@ header {
   border: none;
   cursor: pointer;
   border: 1px solid black;
-  padding: 8px 15px;
+  padding: 8px 10px;
   border-radius: 10px;
 }
 
@@ -513,6 +532,79 @@ main {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.checkout-content .left, .checkout-content .right {
+  width: 45%;
+}
+
+.left h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+.add-info {
+  margin-top: 40px;
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.checkout-content .right .product-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-content .right .product-info h2 {
+  margin-top: 80px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.payment-method, .order {
+  border-top: 1px solid #9F9F9F;
+  margin-top: 20px;
+}
+
+.order .button {
+  text-align: center;
+}
+
+.order p {
+  margin-top: 20px;
+}
+
+.place-order {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 15px 50px;
+  border-radius: 10px;
 }
 
 .pagination {

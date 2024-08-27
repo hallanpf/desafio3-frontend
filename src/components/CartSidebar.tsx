@@ -49,20 +49,19 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
         <p>Your cart is empty.</p>
       ) : (
         <div>
-          <ul>
             {items.map(item => (
-              <li key={item.id}>
-                <p>{item.name}</p>
-                <p><img src={item.image} alt={item.name} /></p>
-                <p>Quantity: {item.quantity}</p>
-                <p>Price: ${(item.price * item.quantity).toFixed(2)}</p>
-                <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
-              </li>
+              <div key={item.id} className='cart-sidebar-content'>
+                <p><img src={item.image}/></p>
+                <p>
+                  <p className='sidebar-content-middle'>{item.name}</p>
+                  <p className='sidebar-content-middle'>{item.quantity} x  Rp. {(item.price * item.quantity).toFixed(2)}</p>
+                </p>
+                <p><button onClick={() => handleRemoveItem(item.id)}><img src="../src/assets/remove-product-icon.png" alt="Remove Button" /></button></p>
+              </div>
             ))}
-          </ul>
           <div>
             <p>Total Quantity: {totalQuantity}</p>
-            <p>Total Price: ${totalPrice.toFixed(2)}</p>
+            <p>Total Price: Rp. {totalPrice}</p>
             <div className='cart-sidebar-buttons'>
               {/* <button onClick={handleClearCart}>Clear Cart</button> */}
               <button onClick={handleGoToCart}>Cart</button>
