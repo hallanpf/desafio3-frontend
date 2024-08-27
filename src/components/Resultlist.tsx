@@ -96,7 +96,7 @@ const ProductVariantsDiscount = ({ variants }: { variants: Product['productVaria
     {variants.map(variant => (
       variant.discount !== 0 && (
       <div className='condition' key={variant.id}>
-        <p className='product-condition'>{variant.discount}</p>
+        <p className='product-condition'>{variant.discount}%</p>
       </div>
       )
     ))}

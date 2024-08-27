@@ -399,11 +399,15 @@ main {
 }
 
 .product-condition {
+  padding: 10px;
+  background-color: #E97171;
+  color: white;
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 48px;
-  height: 48px;
+  width: 30px;
+  height: 28px;
+  border-radius: 50%; 
 }
 
 .product-image img {
