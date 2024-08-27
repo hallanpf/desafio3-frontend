@@ -666,6 +666,7 @@ form input[type="email"] {
 
 .auth-content .right img {
   width: 95%;
+  min-height: 95%;
 }
 
 .pagination {
