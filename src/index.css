@@ -645,6 +645,7 @@ form input[type="email"] {
 .auth-content p {
   text-align: justify;
 }
+
 .auth-content p button {
   width: 100%;
   background-color: #3A5B22;
@@ -655,6 +656,16 @@ form input[type="email"] {
   padding: 15px 100px;
   border-radius: 10px;
   margin-left: 10px;
+}
+
+.auth-content p .sign {
+  color:#0F3DDE;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.auth-content .right img {
+  width: 95%;
 }
 
 .pagination {

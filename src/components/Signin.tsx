@@ -32,11 +32,11 @@ function Signin() {
         <label htmlFor="password">Password</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
         <p><button type="submit">Login</button></p>
-        <p>Don't have an accout? <Link to="/signup">Sign Up</Link></p>
+        <p>Don't have an accout? <Link to="/signup" className='sign'>Sign Up</Link></p>
       </form>
     </div>
     <div className='right'>
-      ...
+      <img src="../src/assets/chris-lee-70l1tDAI6rM-unsplash.png" />
     </div>
     </div>
   );

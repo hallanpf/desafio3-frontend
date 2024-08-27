@@ -34,13 +34,13 @@ function Signup() {
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
           <label htmlFor="password">Password</label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
-          <p><input type='checkbox' name='agree' value='agree' /> I agree to the terms & policy</p>
+          <p>I agree to the terms & policy</p>
           <p><button type="submit">Signup</button></p>
-          <p>Have an accout? <Link to="/signin">Sign In</Link></p>
+          <p>Have an accout? <Link to="/signin" className='sign'>Sign In</Link></p>
         </form>
       </div>
       <div className='right'>
-        ...
+      <img src="../src/assets/chris-lee-70l1tDAI6rM-unsplash.png" />
       </div>
     </div>
   );
