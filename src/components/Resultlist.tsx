@@ -108,7 +108,8 @@ const ResultList = () => {
   const [error, setError] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(1);
-  const limit = 8;
+  const [itemsPerPage, setItemsPerPage] = useState<number>(16);
+  const limit = itemsPerPage;
 
   useEffect(() => {
     fetch(`http://localhost:3000/products?page=${currentPage}&limit=${limit}`)
@@ -122,7 +123,7 @@ const ResultList = () => {
         console.error('Error fetching data:', error);
         setError(true);
       });
-  }, [currentPage]);
+  }, [currentPage, limit]);
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
@@ -135,6 +136,17 @@ const ResultList = () => {
       setCurrentPage(currentPage - 1);
     }
   };
+
+  const handleItemsPerPageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(event.target.value, 10);
+    if (value > 0) {
+      setItemsPerPage(value);
+      setCurrentPage(1);
+    }
+  };
+
+  const startItem = (currentPage - 1) * itemsPerPage + 1;
+  const endItem = Math.min(currentPage * itemsPerPage, products.length * totalPages);
 
   return (
     <>
@@ -155,18 +167,12 @@ const ResultList = () => {
             <button id="filter-button" className="filter-icon">
               <img src="../src/assets/system-uicons_filtering.png" alt="Filter Button" />
             </button>
-            <div className="filter-menu">
-              <button>Default</button>
-              <button>A-Z</button>
-              <button>Z-A</button>
-              <button>Higher to Lower</button>
-              <button>Lower to Higher</button>
-            </div>
+           
           </div>
-          <div className="results-info">Showing 1 - 8 of 20 results</div>
+          <div className="results-info">Showing {startItem} - {endItem} of {products.length * totalPages} results</div>
         </div>
         <div className="right">
-          <p>Show <input id="items-per-page-input" type="number" placeholder="8" /></p>
+          <p>Show <input id="items-per-page-input" type="number" value={itemsPerPage} onChange={handleItemsPerPageChange} /></p>
         </div>    
       </section>
       

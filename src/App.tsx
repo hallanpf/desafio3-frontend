@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
 import Resultlist from './components/Resultlist';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
@@ -28,12 +29,12 @@ function App() {
     <BrowserRouter>
       <header>
         <div className="left">
-          <Link to="/"><img src="../src/assets/Meubel_House_Logos-05.png" alt="Meubel House Logo" />Furniro</Link>
+          <Link to="/products"><img src="../src/assets/Meubel_House_Logos-05.png" alt="Meubel House Logo" />Furniro</Link>
         </div>
         <div className="center">
           <nav>
             <ul>
-              <li><Link to="/">Home</Link></li>
+              <li><Link to="/home">Home</Link></li>
               <li><Link to="/products">Shop</Link></li>
               <li><Link to="#">About</Link></li>
               <li><Link to="#">Contact</Link></li>
@@ -60,6 +61,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
         <ToastContainer position='top-center' autoClose={2000}/>
       </main>
