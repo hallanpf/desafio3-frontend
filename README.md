@@ -6,10 +6,13 @@
 
 ## Tecnologias usadas
 
-[React]: O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
-[TypeScript]: linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
-[Redux]: O Redux Toolkit é uma biblioteca oficial do Redux que fornece um conjunto de utilitários poderosos para tornar o Redux mais fácil de usar.
-[React-toastify]: O React Toastify é uma biblioteca criada em Javascript que permite a criação de notificações personalizadas.
+**[React]**: O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+
+**[TypeScript]**: linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
+
+**[Redux]**: O Redux Toolkit é uma biblioteca oficial do Redux que fornece um conjunto de utilitários poderosos para tornar o Redux mais fácil de usar.
+
+**[React-toastify]**: O React Toastify é uma biblioteca criada em Javascript que permite a criação de notificações personalizadas.
 
 ## Instalação
 
