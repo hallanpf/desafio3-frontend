@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://react.dev/" target="blank"><img src="https://commons.wikimedia.org/wiki/File:React_Logo_SVG.svg" width="200" alt="React Logo" /></a>
+  <a href="https://react.dev/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/30/React_Logo_SVG.svg" width="200" alt="React Logo" /></a>
 </p>
 
   <p align="center">Projeto Front-end em <a href="https://react.dev/" target="_blank">React</a> com <a href="https://redux-toolkit.js.org/" target="_blank">Redux</a> para o desafio realizado no estágio da <a href="https://compass.uol/en/home/" target="_blank">Compass.UOL</a>.</p>
