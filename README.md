@@ -27,6 +27,11 @@ $ npm install
 $ npm run dev
 ```
 
+## Usuário teste:
+
+**[Email]**: teste@teste.com.br
+**[Password]**: 1234567
+
 <p align="center">
   Desenvolvidor por Hallan Pedrosa Ferreira
 </p>
