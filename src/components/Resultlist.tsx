@@ -167,7 +167,6 @@ const ResultList = () => {
             <button id="filter-button" className="filter-icon">
               <img src="../src/assets/system-uicons_filtering.png" alt="Filter Button" />
             </button>
-           
           </div>
           <div className="results-info">Showing {startItem} - {endItem} of {products.length * totalPages} results</div>
         </div>
