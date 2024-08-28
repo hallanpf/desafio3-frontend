@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { RootState } from '../store/store';
 import { removeItemFromCart, updateItemQuantity  } from '../features/cartSlice';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -46,7 +47,10 @@ const Cart = () => {
       
     <div className="cart-content">
       {items.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <>
+        {toast.error('Your cart is empty. Please add some products to cart.')}
+        <Navigate to="/products" />
+        </>
       ) : (
         <div className='cart-items'>
           <table>

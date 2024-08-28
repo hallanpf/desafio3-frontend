@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+<p align="center">
+  <a href="https://react.dev/" target="blank"><img src="https://commons.wikimedia.org/wiki/File:React_Logo_SVG.svg" width="200" alt="React Logo" /></a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <p align="center">Projeto Front-end em <a href="https://react.dev/" target="_blank">React</a> com <a href="https://redux-toolkit.js.org/" target="_blank">Redux</a> para o desafio realizado no estágio da <a href="https://compass.uol/en/home/" target="_blank">Compass.UOL</a>.</p>
 
-Currently, two official plugins are available:
+## Tecnologias usadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[React]: O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+[TypeScript]: linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
+[Redux]: O Redux Toolkit é uma biblioteca oficial do Redux que fornece um conjunto de utilitários poderosos para tornar o Redux mais fácil de usar.
+[React-toastify]: O React Toastify é uma biblioteca criada em Javascript que permite a criação de notificações personalizadas.
 
-## Expanding the ESLint configuration
+## Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+$ npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Iniciando o servidor
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+# development
+$ npm run dev
 ```
+
+<p align="center">
+  Desenvolvidor por Hallan Pedrosa Ferreira
+</p>
