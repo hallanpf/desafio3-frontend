@@ -13,8 +13,12 @@ function Signin() {
     try {
       const response = await axios.post('http://localhost:3000/signIn', { email, password });
       localStorage.setItem('token', response.data.accessToken);
+      localStorage.setItem('userName', response.data.user.props.name);
+      localStorage.setItem('userEmail', response.data.user.props.email);
+
       toast.success('Login successful!');
-      navigate('/checkout');
+
+      navigate('/products');
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error('Invalid email or password');

@@ -1,10 +1,29 @@
 // import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Checkout = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const totalPrice = useSelector((state: RootState) => state.cart.totalPrice);
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedName = localStorage.getItem('userName');
+    const storedEmail = localStorage.getItem('userEmail');
+    if (storedName) setName(storedName);
+    if (storedEmail) setEmail(storedEmail);
+  }, []);
+
+  const handleGoToOrder = () => {
+    navigate('/order');
+  };
+  
 
   return (
     <>
@@ -23,12 +42,8 @@ const Checkout = () => {
         <h1>Billing details</h1>
         <form>
           <div>
-            <label htmlFor='first-name'>First Name</label>
-            <input type='text' id='first-name' name='first-name' required />
-          </div>
-          <div>
-            <label htmlFor='last-name'>Last Name</label>
-            <input type='text' id='last-name' name='last-name' required />
+            <label htmlFor='name'>Name</label>
+            <input type='text' id='name' name='name' value={name} required />
           </div>
           <div>
             <label htmlFor='company-name'>Company Name (optional)</label>
@@ -60,7 +75,7 @@ const Checkout = () => {
           </div>
           <div>
             <label htmlFor='email'>Email address</label>
-            <input type='email' id='email' name='email' required />
+            <input type='email' id='email' name='email' value={email} required />
           </div>
           <div className='add-info'>
             <input type='text' id='add-information' name='add-information' placeholder='Additional information' />
@@ -101,7 +116,7 @@ const Checkout = () => {
               </p>
               <div className='order'>
                 <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <strong>privacy policy.</strong></p>
-                <p className='button'><button className='place-order'>Place Order</button></p>
+                <p className='button'><button className='place-order' onClick={handleGoToOrder}>Place Order</button></p>
               </div>
             </div>
           </div>

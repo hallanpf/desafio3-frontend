@@ -4,6 +4,7 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Signin from './components/Signin';
 import Signup from './components/Signup'
+import Order from './components/Order';
 import Product from './components/Product';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -58,6 +59,7 @@ function App() {
           <Route path="/checkout" element={<ProtectedRoute element={<Checkout />} />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/order" element={<Order />} />
         </Routes>
         <ToastContainer position='top-center' autoClose={2000}/>
       </main>
